@@ -21,11 +21,20 @@ public class LoginActivity extends AppCompatActivity {
         final Button bLogin = (Button) findViewById(R.id.bLogin);
         final TextView registerLink = (TextView) findViewById(R.id.tvRegisterHere);
 
+
         registerLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
                 Intent registerIntent = new Intent(LoginActivity.this,RegisterActivity.class);
                 LoginActivity.this.startActivity(registerIntent);
+            }
+
+        });
+        bLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                Intent LoginIntent = new Intent(LoginActivity.this,UserAreaActivity.class);
+                LoginActivity.this.startActivity(LoginIntent);
             }
 
         });
