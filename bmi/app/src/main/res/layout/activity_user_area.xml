@@ -41,24 +41,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.408" />
 
-    <TextView
-        android:id="@+id/textHeight"
-        android:layout_width="191dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginTop="384dp"
-        android:layout_marginEnd="216dp"
-        android:layout_marginRight="216dp"
-        android:layout_marginBottom="323dp"
-        android:text="input your Height(meter)"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <EditText
-        android:id="@+id/editHeight"
+        android:id="@+id/etHeight"
         android:layout_width="338dp"
         android:layout_height="43dp"
         android:layout_marginStart="29dp"
@@ -68,30 +52,15 @@
         android:layout_marginRight="44dp"
         android:layout_marginBottom="262dp"
         android:ems="10"
+        android:hint="input your Height(meter)"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textWeight"
-        android:layout_width="193dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginTop="482dp"
-        android:layout_marginEnd="214dp"
-        android:layout_marginRight="214dp"
-        android:layout_marginBottom="225dp"
-        android:text="input your Weight"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <EditText
-        android:id="@+id/editWeight"
+        android:id="@+id/etWeight"
         android:layout_width="334dp"
         android:layout_height="39dp"
         android:layout_marginStart="29dp"
@@ -101,6 +70,7 @@
         android:layout_marginRight="48dp"
         android:layout_marginBottom="174dp"
         android:ems="10"
+        android:hint="input your Weight"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -154,4 +124,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
