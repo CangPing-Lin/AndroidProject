@@ -60,4 +60,15 @@
 
     </com.github.mikephil.charting.charts.LineChart>
 
+    <Button
+        android:id="@+id/his"
+        android:layout_width="149dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="290dp"
+        android:layout_marginLeft="290dp"
+        android:layout_marginTop="149dp"
+        android:text="前往看歷史紀錄"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

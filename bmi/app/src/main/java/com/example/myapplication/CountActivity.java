@@ -14,6 +14,7 @@ import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
 
+
 import java.util.ArrayList;
 
 public class CountActivity extends AppCompatActivity {
@@ -28,7 +29,7 @@ public class CountActivity extends AppCompatActivity {
         setContentView(R.layout.activity_count);
 
         lineChart=(LineChart)findViewById(R.id.lc);
-
+        Button his = (Button) findViewById(R.id.his);
 
         b1=(Button)findViewById(R.id.b1);
         b1.setOnClickListener(new View.OnClickListener() {
@@ -43,6 +44,9 @@ public class CountActivity extends AppCompatActivity {
 
             }
         });
+
+
+
 
         TextView result1 =(TextView)findViewById(R.id.stext1);
         TextView result2 =(TextView)findViewById(R.id.stext2);
@@ -60,6 +64,23 @@ public class CountActivity extends AppCompatActivity {
             as= w/(h*h) ;
         result1.setText("你的身高:"+h+"公尺"+",你的體重為:"+w);
         result2.setText("你的Bmi是:"+as);
+
+        his.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                Intent LoginIntent = new Intent(CountActivity.this,SQLite.class);
+                CountActivity.this.startActivity(LoginIntent);
+                Intent intent = new Intent();
+                Bundle bundle = new Bundle();
+                intent.setClass(CountActivity.this, SQLite.class);
+                //intent.putExtra("KEY_As", as);
+                bundle.putInt("KEY_As",(int)as);
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+
+        });
+
 
     }
 
