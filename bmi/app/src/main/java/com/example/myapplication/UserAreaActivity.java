@@ -33,6 +33,19 @@ public class UserAreaActivity extends AppCompatActivity {
         etHeight = (android.widget.EditText) findViewById(R.id.etHeight);
         etWeight = (EditText) findViewById(R.id.etWeight);
         btcount.setOnClickListener(even1);
+        final Button his3 = (Button) findViewById(R.id.his3);
+        final Button updata = (Button) findViewById(R.id.updata);
+
+        his3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                Intent HisIntent = new Intent(UserAreaActivity.this,SQLite.class);
+                UserAreaActivity.this.startActivity(HisIntent);
+
+                //updata.setEnabled(false);
+            }
+
+        });
     }
     private OnClickListener even1 = new OnClickListener() {
 

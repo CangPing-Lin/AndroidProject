@@ -4,11 +4,11 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-/** * Created by fan on 2018/1/21. */
+
 public class BmiData extends SQLiteOpenHelper {
-    private final static String DB="DB.db";//資料庫
-    private final static String TB="TB";//資料表
-    private final static int VS=2;//版本
+    private final static String DB="DB.db";
+    private final static String TB="TB";
+    private final static int VS=2;
 
     public BmiData(Context context) {
         //super(context, name, factory, version);

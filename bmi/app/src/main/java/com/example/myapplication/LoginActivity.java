@@ -22,6 +22,7 @@ public class LoginActivity extends AppCompatActivity {
         final TextView registerLink = (TextView) findViewById(R.id.tvRegisterHere);
 
 
+
         registerLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
@@ -38,5 +39,6 @@ public class LoginActivity extends AppCompatActivity {
             }
 
         });
+
     }
 }

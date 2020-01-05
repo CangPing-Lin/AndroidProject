@@ -10,7 +10,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -25,30 +24,44 @@ public class SQLite extends AppCompatActivity {
         setContentView(R.layout.activity_bmi_data);
         DH = new BmiData(this);
         final Button back = (Button) findViewById(R.id.back);
+        final Button updata = (Button) findViewById(R.id.updata);
 
-        Intent intent = getIntent();
-        Bundle bundle = new Bundle();
-        int bmi= intent.getIntExtra("KEY_As", 1);
-        //int bmi= bundle.getInt("KEY_As");
-
-        String s =Integer.toString(bmi);
-        add("你的bmi是"+s);//加入的資料
+        add();
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-                Intent LoginIntent = new Intent(SQLite.this,LoginActivity.class);
-                SQLite.this.startActivity(LoginIntent);
+                Intent backIntent = new Intent(SQLite.this,LoginActivity.class);
+                SQLite.this.startActivity(backIntent);
             }
 
         });
+        updata.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                Intent intent = getIntent();
+                Bundle bundle = new Bundle();
+                int bmi= intent.getIntExtra("KEY_As", 1);
+                //int bmi= bundle.getInt("KEY_As");
+                String s =Integer.toString(bmi);
+                SQLiteDatabase db = DH.getWritableDatabase();
+                ContentValues values = new ContentValues();
+                values.put("_title", "你的bmi是:"+s.toString());//載入資料123
+                db.insert("TB", null, values);//寫入123
+                ListView LV1 = (ListView) findViewById(R.id.LV);//讀取元件
+                add();
+                updata.setEnabled(false);
+            }
+
+        });
+
     }
 
-    private void add(String s) {
+    private void add() {
         SQLiteDatabase db = DH.getWritableDatabase();
-        ContentValues values = new ContentValues();
+        /*ContentValues values = new ContentValues();
         values.put("_title", s.toString());//載入資料123
-        db.insert("TB", null, values);//寫入123
+        db.insert("TB", null, values);//寫入123*/
         ListView LV1 = (ListView) findViewById(R.id.LV);//讀取元件
 
 //查詢資料庫並載入

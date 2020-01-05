@@ -10,9 +10,9 @@
         android:id="@+id/b1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="320dp"
-        android:layout_marginLeft="320dp"
-        android:layout_marginTop="92dp"
+        android:layout_marginStart="312dp"
+        android:layout_marginLeft="312dp"
+        android:layout_marginTop="84dp"
         android:text="顯示折線圖"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -37,11 +37,11 @@
 
     <Button
         android:id="@+id/back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="320dp"
-        android:layout_marginLeft="320dp"
-        android:layout_marginTop="44dp"
+        android:layout_width="93dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="312dp"
+        android:layout_marginLeft="312dp"
+        android:layout_marginTop="36dp"
         android:text="返回"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"></Button>
@@ -64,9 +64,9 @@
         android:id="@+id/his"
         android:layout_width="149dp"
         android:layout_height="50dp"
-        android:layout_marginStart="290dp"
-        android:layout_marginLeft="290dp"
-        android:layout_marginTop="149dp"
+        android:layout_marginStart="260dp"
+        android:layout_marginLeft="260dp"
+        android:layout_marginTop="148dp"
         android:text="前往看歷史紀錄"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

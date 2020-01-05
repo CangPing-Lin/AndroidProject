@@ -35,12 +35,15 @@ public class CountActivity extends AppCompatActivity {
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 ArrayList<Entry>value1 =new ArrayList<>();
                 value1.add(new Entry(1,(float)as));
 
 
 
                 text_all(value1);
+
+
 
             }
         });
