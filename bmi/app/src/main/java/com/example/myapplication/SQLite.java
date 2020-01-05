@@ -31,7 +31,7 @@ public class SQLite extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-                Intent backIntent = new Intent(SQLite.this,LoginActivity.class);
+                Intent backIntent = new Intent(SQLite.this,UserAreaActivity.class);
                 SQLite.this.startActivity(backIntent);
             }
 

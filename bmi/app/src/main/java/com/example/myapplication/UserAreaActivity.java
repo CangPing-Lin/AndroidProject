@@ -2,15 +2,15 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RadioButton;
 import android.widget.TextView;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 public class UserAreaActivity extends AppCompatActivity {
     private EditText etUsername;
@@ -19,33 +19,34 @@ public class UserAreaActivity extends AppCompatActivity {
     private Button btcount;
     private EditText etHeight;
     private EditText etWeight;
-
-
+    Button btLogout;
+    FirebaseAuth mFirebaseAuth;
+    private FirebaseAuth.AuthStateListener mAuthStateLinstener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_area);
-        etUsername = (android.widget.EditText) findViewById(R.id.etUsername);
-        etAge = (EditText) findViewById(R.id.etAge);
+        etUsername = (android.widget.EditText) findViewById(R.id.etEmail);
         welcomemessage = (TextView) findViewById(R.id.tvWellcomeMsg);
         btcount = (Button) findViewById(R.id.btcount);
         etHeight = (android.widget.EditText) findViewById(R.id.etHeight);
         etWeight = (EditText) findViewById(R.id.etWeight);
         btcount.setOnClickListener(even1);
-        final Button his3 = (Button) findViewById(R.id.his3);
-        final Button updata = (Button) findViewById(R.id.updata);
+        btLogout=findViewById(R.id.btLogout);
 
-        his3.setOnClickListener(new View.OnClickListener() {
+        btLogout.setOnClickListener(new View.OnClickListener(){
+
             @Override
-            public void onClick(View v){
-                Intent HisIntent = new Intent(UserAreaActivity.this,SQLite.class);
-                UserAreaActivity.this.startActivity(HisIntent);
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                Intent intTologin =new Intent(UserAreaActivity.this,LoginActivity.class);
+                startActivity(intTologin);
 
-                //updata.setEnabled(false);
             }
-
         });
+
+
     }
     private OnClickListener even1 = new OnClickListener() {
 

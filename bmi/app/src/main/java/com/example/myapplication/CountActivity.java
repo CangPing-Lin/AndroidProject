@@ -35,15 +35,12 @@ public class CountActivity extends AppCompatActivity {
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 ArrayList<Entry>value1 =new ArrayList<>();
                 value1.add(new Entry(1,(float)as));
 
 
 
                 text_all(value1);
-
-
 
             }
         });
@@ -65,7 +62,7 @@ public class CountActivity extends AppCompatActivity {
             w=weight;
             h=height*0.01;
             as= w/(h*h) ;
-        result1.setText("你的身高:"+h+"公尺"+",你的體重為:"+w);
+        result1.setText("你的身高:"+h+"公尺"+",你的體重為:"+w+"公斤");
         result2.setText("你的Bmi是:"+as);
 
         his.setOnClickListener(new View.OnClickListener() {
